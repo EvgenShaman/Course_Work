@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link href="../static/css/home.css" th:href="@{/css/home.css}" rel="stylesheet" />
+  <script src="../static/script/Not_a_clicker.js" ></script>
+</head>
+<div id="mask"></div>
+<div id="menu">
+  <a class="menu_button" onclick="menu_func('mask', 'menu', 'cb')"><img id="logo3" src="lotus.png" alt="Логотип" X-UA-Compatible width="50px" height="50px"></a>
+  <a class="menu_navigation" href="home">Главная</a>
+  <a class="menu_navigation" href="catalogue">Каталог</a>
+  <a class="menu_navigation" href="add">Корзина</a>
+  <a class="menu_navigation" href="add">Работникам</a>
+</div>
+<body>
+<header class="upper_panel">
+  <a class="menu_button" onclick="menu_func('mask', 'menu', 'cb')"><img id="logo2" src="../static/icons/cake.png" th:src="@{/icons/cake.png}" alt="Логотип" X-UA-Compatible width="50px" height="50px"></a>
+  <a class="main_link" href="home"><img id="logo" src="../static/icons/cake.png" th:src="@{/icons/cake.png}" alt="Логотип" X-UA-Compatible width="50px" height="50px"></a>
+  <nav style="width: max-content">
+    <a href="catalogue"> Каталог</a>
+    <a href="add">Работникам</a>
+  </nav>
+</header>
+<div id="cb">
+  <h1>Добавление товара</h1>
+  <form action="/sugarcube/add" method="post">
+    <input type="text" name="cost" placeholder="Введите цену товара" class="form-control"><br>
+    <input type="text" name="name" placeholder="Введите название товара" class="form-control"><br>
+    <input type="text" name="pictureName" placeholder="Введите название для фото товара" class="form-control"><br>
+    <button type="submit" class="btn btn-success">Добавить блюдо</button>
+  </form>
+</div>
+<footer class="content-container">2022© EvgenShaman. ALL RIGHTS RESERVED</footer>
+</body>
+<html>

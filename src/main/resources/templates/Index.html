@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="../static/css/home.css" th:href="@{/css/home.css}" rel="stylesheet" />
+    <script src="../static/script/Not_a_clicker.js" ></script>
+</head>
+<div id="mask"></div>
+<div id="menu">
+    <a class="menu_button" onclick="menu_func('mask', 'menu', 'cb')"><img id="logo3" src="lotus.png" alt="Логотип" X-UA-Compatible width="50px" height="50px"></a>
+    <a class="menu_navigation" href="home">Главная</a>
+    <a class="menu_navigation" href="catalogue">Каталог</a>
+    <a class="menu_navigation" href="add">Корзина</a>
+    <a class="menu_navigation" href="add">Работникам</a>
+</div>
+<body>
+    <header class="upper_panel">
+        <a class="menu_button" onclick="menu_func('mask', 'menu', 'cb')"><img id="logo2" src="../static/icons/cake.png" th:src="@{/icons/cake.png}" alt="Логотип" X-UA-Compatible width="50px" height="50px"></a> 
+        <a class="main_link" href="home"><img id="logo" src="../static/icons/cake.png" th:src="@{/icons/cake.png}" alt="Логотип" X-UA-Compatible width="50px" height="50px"></a>
+        <nav style="width: max-content"> 
+            <a href="catalogue"> Каталог</a>
+            <a href="add">Работникам</a>
+        </nav> 
+    </header>
+    <div id="cb">
+        <b style="font-size: 10svh; ">
+            Добро пожаловать!
+        </b>
+        <p a style="font-size: 5svh; margin-top: 7svh;">Не упустите по истине уникальный шанс отведать нашу прекрасную выпечку и насладиться нашим, лучшим в городе, чаем! Нажмите на каталог, чтобы выбрать необходимые вам товары, оформите заказ в корзине и всё что вам остаётся - дождаться вашей прекрасной еды!</p>
+        <b style="font-size: 10svh; ">
+            Наши товары:
+        </b>
+        <div style="display: flex; margin-top: 7svh;">
+            <img src="../static/icons/Donut.png" th:src="@{/icons/Donut.png}" height="300px" width="300px" style="margin: 9svh;">
+            <img src="../static/icons/MMMM.png" th:src="@{/icons/MMMM.png}" height="300px" width="200px" style="margin: 9svh;">
+            <img src="../static/icons/Statue.png" th:src="@{/icons/Statue.png}" height="300px" width="300px" style="margin: 9svh;">
+        </div>
+    </div>
+    <footer class="content-container">2022© EvgenShaman. ALL RIGHTS RESERVED</footer> 
+</body>
+<html>
