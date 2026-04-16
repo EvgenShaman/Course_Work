@@ -42,7 +42,7 @@ sonarqube {
 		property "sonar.organization", "evgenshaman"
 		property "sonar.host.url", "https://sonarcloud.io"
 		property "sonar.coverage.jacoco.xmlReportPaths", "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
-		property "sonar.java.source", "11"
+		property "sonar.java.source", "17"
 		property "sonar.sourceEncoding", "UTF-8"
 	}
 }
