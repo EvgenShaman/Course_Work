@@ -1,27 +1,11 @@
 language: java
-jdk:
-  - openjdk17
-
-env:
-  global:
-    - GRADLE_OPTS="-Dorg.gradle.daemon=false"
+jdk: openjdk17  # Минимальная версия для SonarCloud Scanner
 
 addons:
   sonarcloud:
-    organization: EvgenShaman
-    token: eb6389d18431e8ee55c89634caa34dfc92804066
-
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+    organization: "ваш_organization_key"  # Ключ организации из SonarCloud
+    token: $SONAR_TOKEN                   # Зашифрованная переменная из Travis CI
 
 script:
-  - chmod +x gradlew
-  - ./gradlew clean test jacocoTestReport sonarqube \
-    -Dsonar.login=eb6389d18431e8ee55c89634caa34dfc92804066 \
-    -Dsonar.organization=EvgenShaman \
-    -Dsonar.host.url=https://sonarcloud.io
-
-after_success:
-  - echo "✅ Анализ кода завершён! Результаты на https://sonarcloud.io"
+  # Команда для Maven: сборка, тесты и анализ SonarCloud
+  - mvn clean verify sonar:sonar -Pcoverage
