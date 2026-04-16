@@ -9,6 +9,7 @@ env:
 addons:
   sonarcloud:
     organization: EvgenShaman
+    token: eb6389d18431e8ee55c89634caa34dfc92804066
 
 cache:
   directories:
@@ -18,7 +19,7 @@ cache:
 script:
   - chmod +x gradlew
   - ./gradlew clean test jacocoTestReport sonarqube \
-    -Dsonar.login=$SONAR_TOKEN
+    -Dsonar.login=eb6389d18431e8ee55c89634caa34dfc92804066 \
     -Dsonar.organization=EvgenShaman \
     -Dsonar.host.url=https://sonarcloud.io
 
