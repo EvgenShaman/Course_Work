@@ -3,7 +3,7 @@ jdk: openjdk17  # Минимальная версия для SonarCloud Scanner
 
 addons:
   sonarcloud:
-    organization: "EvgenShaman"  # Ключ организации из SonarCloud
+    organization: "evgenshaman"  # Ключ организации из SonarCloud
     token: $SONAR_TOKEN                   # Зашифрованная переменная из Travis CI
 
 script:
