@@ -8,4 +8,5 @@ addons:
 
 script:
   # Команда для Maven: сборка, тесты и анализ SonarCloud
-  - gradle sonarqube -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=$SONAR_PROJECT_KEY
+  - ./gradlew sonarqube -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=$SONAR_PROJECT_KEY
+
