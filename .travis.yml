@@ -8,4 +8,4 @@ addons:
 
 script:
   # Команда для Maven: сборка, тесты и анализ SonarCloud
-  - mvn clean verify sonar:sonar -Pcoverage
+  - gradle sonarqube -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=$SONAR_PROJECT_KEY
