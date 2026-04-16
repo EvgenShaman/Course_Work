@@ -4,7 +4,6 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.0'
 	id 'jacoco'                           // для покрытия тестов
 	id 'org.sonarqube' version '4.4.1.3373'  // плагин SonarQube/SonarCloud
-
 }
 
 group = 'com.example'
@@ -39,8 +38,8 @@ jacocoTestReport {
 
 sonarqube {
 	properties {
-		property "sonar.projectKey", "EvgenShaman_Course_Work"
-		property "sonar.organization", "EvgenShaman"
+		property "sonar.projectKey", "EvgenShaman-Course_Work"
+		property "sonar.organization", "evgenshaman"
 		property "sonar.host.url", "https://sonarcloud.io"
 		property "sonar.coverage.jacoco.xmlReportPaths", "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
 		property "sonar.java.source", "11"
