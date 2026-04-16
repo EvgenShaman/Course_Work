@@ -1,0 +1,23 @@
+env:
+  global:
+    - GRADLE_OPTS="-Dorg.gradle.daemon=false"
+
+addons:
+  sonarcloud:
+    organization: EvgenShaman
+    token: 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
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+script:
+  - chmod +x gradlew
+  - ./gradlew clean test jacocoTestReport sonarqube \
+    -Dsonar.login=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 \
+    -Dsonar.organization=EvgenShaman \
+    -Dsonar.host.url=https://sonarcloud.io
+
+after_success:
+  - echo "✅ Анализ кода завершён! Результаты на https://sonarcloud.io"
